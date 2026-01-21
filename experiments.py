@@ -52,8 +52,17 @@ def run_data_fraction_study(model_depth=2, fractions=(0.1, 0.3, 0.5, 1.0)):
         results[frac] = history
     return results
 
+def run_regularization_study(depth=5):
+    print("\nRunning without regularization")
+    model_no_reg = MLP(depth=depth, dropout=0.0)
+    run_experiment(model_no_reg)
+
+    print("\nRunning with dropout regularization")
+    model_dropout = MLP(depth=depth, dropout=0.5)
+    run_experiment(model_dropout)
+
 
 if __name__ == "__main__":
-    print("Running dataset size ablation (depth=2)")
-    run_data_fraction_study(model_depth=2)
+    print("Running regularization study (depth=5)")
+    run_regularization_study(depth=5)
 
