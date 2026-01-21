@@ -1,25 +1,19 @@
-# An Empirical Study of Overfitting and Generalization in Neural Networks
+#An Empirical Study of Overfitting and Generalization in Neural Networks
 
 ## Overview
-Work in progress.
+This project empirically studies overfitting and generalization behavior in neural networks through controlled experiments on model capacity, data size, and regularization.
 
 ## Motivation
-Neural networks often achieve near-perfect training accuracy while generalizing poorly.
-This project aims to empirically study how model capacity and data size influence
-generalization behavior under controlled settings.
+Neural networks often achieve high training accuracy while generalizing poorly. Understanding this gap is critical for designing robust models.
 
 ## Experimental Setup
-Work in progress.
+Experiments are conducted on MNIST using logistic regression and multi-layer perceptrons of varying depth. Training data size and regularization are systematically varied.
 
 ## Results
-Preliminary experiments indicate that increasing network depth improves training performance but can exacerbate overfitting under fixed data regimes.
-Reducing the amount of training data significantly increases the generalization gap.
-With limited data, models achieve high training accuracy but exhibit degraded and unstable validation performance, highlighting the role of data availability in controlling overfitting.
-Applying dropout regularization reduces training accuracy but improves validation stability, indicating a trade-off between model capacity and generalization that aligns with classical overfitting theory.
-Across all experiments, training accuracy consistently increases with model capacity, while validation accuracy saturates early. 
-This divergence highlights the classical generalization gap and reinforces the importance of data availability and regularization in controlling overfitting.
-
+Increasing model capacity improves training performance but does not consistently improve validation accuracy.
+Reducing dataset size significantly amplifies the generalization gap.
+Dropout regularization improves validation stability at the cost of lower training accuracy.
 
 ## Limitations
-Work in progress.
+Experiments are limited to small-scale datasets and simple architectures. Results may not directly extrapolate to large-scale or highly structured data.
 
