@@ -13,6 +13,8 @@ Work in progress.
 
 ## Results
 Preliminary experiments indicate that increasing network depth improves training performance but can exacerbate overfitting under fixed data regimes.
+Reducing the amount of training data significantly increases the generalization gap.
+With limited data, models achieve high training accuracy but exhibit degraded and unstable validation performance, highlighting the role of data availability in controlling overfitting.
 
 
 ## Limitations

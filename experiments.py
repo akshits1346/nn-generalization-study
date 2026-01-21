@@ -39,13 +39,21 @@ def run_experiment(model, data_fraction=1.0, epochs=10, lr=1e-3):
 
     return history
 
+def run_data_fraction_study(model_depth=2, fractions=(0.1, 0.3, 0.5, 1.0)):
+    results = {}
+    for frac in fractions:
+        print(f"\nRunning with data fraction = {frac}")
+        model = MLP(depth=model_depth)
+        history = run_experiment(
+            model,
+            data_fraction=frac,
+            epochs=10
+        )
+        results[frac] = history
+    return results
+
 
 if __name__ == "__main__":
-    print("Running shallow network (depth=2)")
-    shallow_model = MLP(depth=2)
-    run_experiment(shallow_model)
-
-    print("\nRunning deeper network (depth=5)")
-    deep_model = MLP(depth=5)
-    run_experiment(deep_model)
+    print("Running dataset size ablation (depth=2)")
+    run_data_fraction_study(model_depth=2)
 
