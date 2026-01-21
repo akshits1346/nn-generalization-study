@@ -41,6 +41,11 @@ def run_experiment(model, data_fraction=1.0, epochs=10, lr=1e-3):
 
 
 if __name__ == "__main__":
-    model = MLP(depth=2)
-    run_experiment(model)
+    print("Running shallow network (depth=2)")
+    shallow_model = MLP(depth=2)
+    run_experiment(shallow_model)
+
+    print("\nRunning deeper network (depth=5)")
+    deep_model = MLP(depth=5)
+    run_experiment(deep_model)
 

@@ -12,7 +12,8 @@ generalization behavior under controlled settings.
 Work in progress.
 
 ## Results
-Work in progress.
+Preliminary experiments indicate that increasing network depth improves training performance but can exacerbate overfitting under fixed data regimes.
+
 
 ## Limitations
 Work in progress.
