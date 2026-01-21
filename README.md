@@ -16,6 +16,8 @@ Preliminary experiments indicate that increasing network depth improves training
 Reducing the amount of training data significantly increases the generalization gap.
 With limited data, models achieve high training accuracy but exhibit degraded and unstable validation performance, highlighting the role of data availability in controlling overfitting.
 Applying dropout regularization reduces training accuracy but improves validation stability, indicating a trade-off between model capacity and generalization that aligns with classical overfitting theory.
+Across all experiments, training accuracy consistently increases with model capacity, while validation accuracy saturates early. 
+This divergence highlights the classical generalization gap and reinforces the importance of data availability and regularization in controlling overfitting.
 
 
 ## Limitations
