@@ -1,4 +1,4 @@
-#An Empirical Study of Overfitting and Generalization in Neural Networks
+# An Empirical Study of Overfitting and Generalization in Neural Networks
 
 ## Overview
 This project empirically studies overfitting and generalization behavior in neural networks through controlled experiments on model capacity, data size, and regularization.
