@@ -21,4 +21,5 @@ Experiments are limited to small-scale datasets and simple architectures. Result
 
 Models that generalize well on the training distribution exhibit significant performance degradation under distribution shift.
 Experiments on rotated MNIST demonstrate that high in-distribution accuracy does not guarantee robustness, highlighting a limitation of standard generalization metrics.
+Regularization marginally improves robustness under small shifts but does not eliminate sensitivity to distribution changes.
 

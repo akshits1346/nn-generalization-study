@@ -12,7 +12,7 @@ def train_and_evaluate_ood(angle):
     train_loader, test_loader = get_mnist_loaders()
     ood_loader = get_rotated_mnist_loader(angle)
 
-    model = MLP(depth=2).to(DEVICE)
+    model = MLP(depth=2, dropout=0.5).to(DEVICE)
     optimizer = optim.Adam(model.parameters(), lr=1e-3)
 
     for _ in range(10):
